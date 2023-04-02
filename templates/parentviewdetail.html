@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>parent View detail</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{{url_for('static',filename = 'attimages/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'attvendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'attfonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'attvendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='attvendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='attvendor/perfect-scrollbar/perfect-scrollbar.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='attcss/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='attcss/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+					<tr class="table100-head">
+					
+				    <th scope="col">CHILDNAME</th>
+                    <th scope="col">BIRTHPLACE</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">CHILDAGE</th>
+                    <th scope="col">WEIGHT</th>
+                    <th scope="col">PARENTNAME</th>
+                    <th scope="col">PHONENO</th>
+					<th scope="col">STATUS</th>
+                    
+								
+				  
+								
+								
+							</tr>
+						</thead>
+						<tbody>
+							{%for hos in hos%}
+							<tr> 
+								
+									
+							
+								
+							    <td>{{ hos [2] }}</td>
+							    <td>{{ hos [3] }}</td>
+								<td>{{ hos [4] }}</td>
+								<td>{{ hos [5] }}</td>
+								<td>{{ hos [6] }}</td>
+								<td>{{ hos [7] }}</td>
+
+								<td>{{ hos [8] }}</td>
+								<td><a href="{{url_for('parentadddetailupdate',id=hos[1],pid=hos[0])}}">update</a></td>
+								
+								
+								
+								{%endfor%}
+								
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="static/attvendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/attvendor/bootstrap/js/popper.js"></script>
+	<script src="static/attvendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/attvendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/attjs/main.js"></script>
+
+</body>
+</html>

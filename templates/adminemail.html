@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ADMIN HOME</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static',filename='assetsadhp/img/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static',filename='assetsadhp/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='assetsadhp/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsadhp/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsadhp/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsadhp/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename='assetsadhp/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Amoeba - v2.3.1
+  * Template URL: https://bootstrapmade.com/free-one-page-bootstrap-template-amoeba/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="index.html"><span>Admin home</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li><a href="{{url_for('adminparentchildregisterview')}}"> CHILD VIEW REGISTER</a></li>
+          <li><a href="{{url_for('adminparentregisterview')}}">  PARENT VIEW REGISTER</a></li>
+          <li><a href="{{url_for('adminviewdoctor')}}"> VIEW DOCTOR </a></li>
+          <li><a href="{{url_for('viewhospital')}}">VIEW HOSPITAL </a></li>
+          <li><a href="{{url_for('adminviewvaccine')}}">VACCINE </a></li>
+          <li><a href="{{url_for('adminviewpolio')}}">POLIO </a></li>
+          <li><a class="boxed-btr3" href="{{url_for('vaccine')}}"> <strong> LOGOUT</strong></strong></a></li>
+        <ul>
+              
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End #header -->
+
+  <!-- ======= Hero Section ======= -->
+  <form action="" method="POST">
+   
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Email Id</label>
+        <input type="text" class="form-control"  name="emailid" placeholder="Enter Status" value="{{user[3]}}">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Message</label>
+        <input type="text" class="form-control"  name="message" placeholder="Enter Status" >
+      </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+
+  
+<!-- Vendor JS Files -->
+<script src="static/assetsadhp/vendor/jquery/jquery.min.js"></script>
+<script src="static/assetsadhp/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assetsadhp/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="static/assetsadhp/vendor/php-email-form/validate.js"></script>
+<script src="static/assetsadhp/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="static/assetsadhp/vendor/venobox/venobox.min.js"></script>
+<script src="static/assetsadhp/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="static/assetsadhp/js/main.js"></script>
+
+
+ 
+</body>
+
+</html>

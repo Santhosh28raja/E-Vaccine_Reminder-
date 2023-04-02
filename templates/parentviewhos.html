@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Parent home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static',filename='assetsadh/img/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static',filename='assetsadh/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='assetsadh/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsadh/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsadh/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsadh/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename='assetsadh/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Amoeba - v2.3.1
+  * Template URL: https://bootstrapmade.com/free-one-page-bootstrap-template-amoeba/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="index.html"><span>parent home</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+            <li>    <a href="{{url_for('parentviewquery',id=par)}}">View Query</a></li>
+          <li><a class="boxed-btr3" href="{{url_for('vaccine')}}"> <strong> LOGOUT</strong></strong></a></li>
+        <ul>
+              
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End #header -->
+   
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <h1></h1>
+      <h2></h2>
+      
+    </div>
+  </section><!-- #hero -->
+<!-- ======= About Us Section ======= -->
+<section id="about" class="about">
+  <div class="container">
+
+    <div class="section-title">
+      <h2></h2>
+    </div>
+
+   
+
+    <table class="table">
+        <thead>
+          <tr>
+          <th scope="col">name</th>
+          <th scope="col">specialization</th>
+          <th scope="col">degree</th>
+          <th scope="col">experience</th>
+          <th scope="col">joiningdate</th>
+          <th scope="col">gender</th>
+          <th scope="col">phoneno</th>
+          <th scope="col">emailid</th>
+          
+          <th scope="col">message</th>
+            
+            <tr>
+            {%for hos in polio%}
+          
+          <td>{{ hos [2] }}</td>
+          <td>{{ hos [3] }}</td>
+          <td>{{ hos [4] }}</td>
+          <td>{{ hos [5] }}</td>
+          <td>{{ hos [6] }}</td>
+          <td>{{ hos [7] }}</td>
+          <td>{{ hos [9] }}</td>
+          <td>{{ hos [8] }}</td>
+                    
+
+           <td><a href="{{url_for('parentquery',id=hos[1],pid=par)}}">Message</a></td>         
+                    
+
+                </tr>
+                {%endfor%}	
+
+  </div>
+</section><!-- End About Us Section -->
+
+  <main id="main">
+
+    
+
+    </div>
+
+    </div>
+ 
+  </div>
+   
+</body>
+
+</html>
+    </section><!-- End About Us Section -->
+
+   
+   
+
+   
+  <!-- Vendor JS Files -->
+  <script src="static/assetsadh/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assetsadh/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assetsadh/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assetsadh/vendor/php-email-form/validate.js"></script>
+  <script src="static/assetsadh/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assetsadh/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assetsadh/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assetsadh/js/main.js"></script>
+
+</body>
+
+</html>

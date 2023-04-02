@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>view profile</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='imagessl/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='slvendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='slfonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='slfonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='slvendor/animate/animate.css')}}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='slvendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='slvendor/animsition/css/animsition.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='slvendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='slvendor/daterangepicker/daterangepicker.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='slcss/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='slcss/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-b-160 p-t-50">
+				<form class="login100-form validate-form" method="POST" action="">
+          <span class="login100-form-title p-b-43">
+            
+            view profile
+          </span>
+          <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">username</th>
+                <th scope="col">password</th>
+                <th scope="col">hosname</th>
+                <th scope="col">hosaddress</th>
+                <th scope="col">phoneno</th>
+                <th scope="col">email</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              {%for hos in hos%}
+              <tr>
+                <td>{{ hos [1] }}</td>
+                <td>{{ hos [2] }}</td>
+                <td>{{ hos [3] }}</td>
+                <td>{{ hos [4] }}</td>
+                <td>{{ hos [5] }}</td>
+                <td>{{ hos [6] }}</td>
+                </tr>
+      {%endfor%}	
+    </div>
+  	</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+	
+<!--===============================================================================================-->
+	<script src="static/slvendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/slvendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/slvendor/bootstrap/js/popper.js"></script>
+	<script src="static/slvendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/slvendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/slvendor/daterangepicker/moment.min.js"></script>
+	<script src="static/slvendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="static/slvendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="static/sljs/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>HOSPITAL UPDATE</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static',filename = 'imagesas/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'vendoras/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'fontsas/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'fontsas/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'vendoras/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'vendoras/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'vendoras/animsition/css/animsition.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'vendoras/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'vendoras/daterangepicker/daterangepicker.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'cssas/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'cssas/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="static/imagesas/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+
+		<div class="wrap-contact100">
+			<div class="contact100-form-title" style="background-image: url(static/imagesas/bg-01.jpg);">
+				<span class="contact100-form-title-1">
+					HOSPITAL UPDATE
+				</span>
+
+				<span class="contact100-form-title-2">
+					Feel free to drop us a line below!
+				</span>
+			</div>
+            <form class="contact100-form validate-form" method="POST" action="" enctype="multipart/form-data">
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">username:</span>
+					<input class="input100" type="text" name="username" placeholder="Enter name" value="{{hos[1]}}">
+					<span class="focus-input100"></span>
+				</div>
+				
+                <form class="contact100-form validate-form" method="POST" action="" enctype="multipart/form-data">
+                    <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <span class="label-input100">password:</span>
+                        <input class="input100" type="text" name="password" placeholder="Enter password"value="{{hos[2]}}">
+                        <span class="focus-input100"></span>
+                    </div>
+                    
+
+			<form class="contact100-form validate-form" method="POST" action="" enctype="multipart/form-data">
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">hosname:</span>
+					<input class="input100" type="text" name="hosname" placeholder="Enter full name"value="{{hos[3]}}">
+					<span class="focus-input100"></span>
+				</div>
+				
+				<form class="contact100-form validate-form">
+					<div class="wrap-input100 validate-input" data-validate="Name is required">
+						<span class="label-input100">hosaddress:</span>
+						<input class="input100" type="text" name="hosaddress" placeholder="address"value="{{hos[4]}}">
+						<span class="focus-input100"></span>
+					</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "phone is requried">
+					<span class="label-input100">phoneno:</span>
+					<input class="input100" type="text" name="phoneno" placeholder="Enter phoneno"value="{{hos[5]}}">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+					<span class="label-input100">email:</span>
+					<input class="input100" type="text" name="email" placeholder="Enter email address"value="{{hos[6]}}">
+					<span class="focus-input100"></span>
+				</div>
+
+				
+				
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="static/vendoras/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendoras/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendoras/bootstrap/js/popper.js"></script>
+	<script src="static/vendoras/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendoras/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendoras/daterangepicker/moment.min.js"></script>
+	<script src="static/vendoras/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendoras/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="static/https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+	<script src="static/jsas/map-custom.js"></script>
+<!--===============================================================================================-->
+	<script src="static/jsas/main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="static/https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+
+</body>
+</html>

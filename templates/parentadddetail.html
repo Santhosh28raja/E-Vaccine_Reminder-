@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>ADD DETAIL</title>
+
+    <!-- Icons font CSS-->
+    <link href="{{url_for('static',filename='vendorp/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all')}}">
+    <link href="{{url_for('static',filename='vendorp/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all')}}">
+    <!-- Font special for pages-->
+    <link href="{{url_for('static',filename='https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet')}}">
+
+    <!-- Vendor CSS-->
+    <link href="{{url_for('static',filename='vendorp/select2/select2.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url_for('static',filename='vendorp/datepicker/daterangepicker.css')}}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{url_for('static',filename='cssp/main.css')}}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Details Info</h2>
+                    <form action="" method="POST">
+                        <div class="input-group">
+                            <input class="input--style-3" name="poid" type="text" placeholder="id" readonly value={{posid}} >
+                        </div>
+                        
+                       
+                        <div class="input-group">
+                            <input class="input--style-3" name="childname" type="text" placeholder="childname" >
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" name="birthplace" type="text" placeholder="birthplace" >
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" name="dob" type="text" placeholder="dob" >
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" name="childage" type="text" placeholder="childage" >
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" name="weight" type="text" placeholder="weight" >
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" name="parentname" type="text" placeholder="parentname" >
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" name="phoneno" type="text" placeholder="phoneno">
+                        </div>
+                        
+                        <div class="input-group">
+                            <input class="input--style-3" name="email" type="email" placeholder="email">
+                        </div>
+                   
+                        
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendorp/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendorp/select2/select2.min.js"></script>
+    <script src="vendorp/datepicker/moment.min.js"></script>
+    <script src="vendorp/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="jsp/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

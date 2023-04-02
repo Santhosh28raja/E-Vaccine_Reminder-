@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static',filename='assetspad/img/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static',filename='assetspad/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='assetspad/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetspad/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetspad/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetspad/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetspad/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetspad/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetspad/vendor/aos/aos.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename='assetspad/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Dewi - v2.2.1
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="HOME"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+         
+          <li><a href="#about"></a></li>
+          
+          
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="#about" class="get-started-btn scrollto"></a>
+      
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>View Children</h2>
+        
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Children</h2>
+      
+      </div>
+{%for chi in child %}
+      <div class="row" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="bi bi-laptop"></i>
+            <h4><a href="{{url_for('adminupdatevaacine',id=chi[1])}}">{{chi[2]}}</a></h4>
+            <p>BirthPlace : {{chi[3]}}<br>
+            Dob : {{chi[4]}}<br>
+            vaccine1: {{chi[9]}}<br>
+            vaccine2: {{chi[10]}}<br>
+            vaccine3: {{chi[11]}}<br>
+            vaccine4: {{chi[12]}}<br>
+            vaccine5: {{chi[13]}}<br>
+            vaccine6: {{chi[14]}}<br>
+            vaccine7: {{chi[15]}}<br>
+
+            vaccine8: {{chi[16]}}<br>
+            vaccine9: {{chi[17]}}<br>
+            vaccine10: {{chi[18]}}<br>
+            
+            
+            
+            </p>
+          </div>
+        </div>
+   
+       
+      </div>
+      {%endfor%}
+    </div>
+  </section><!-- End Services Section -->
+
+  
+<a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assetspad/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assetspad/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assetspad/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assetspad/vendor/php-email-form/validate.js"></script>
+  <script src="static/assetspad/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/assetspad/vendor/counterup/counterup.min.js"></script>
+  <script src="static/assetspad/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assetspad/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assetspad/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assetspad/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assetspad/js/main.js"></script>
+
+</body>
+
+</html>

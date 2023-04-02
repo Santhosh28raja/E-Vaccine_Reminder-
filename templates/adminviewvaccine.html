@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ADMIN HOME</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static',filename='assetsadhp/img/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static',filename='assetsadhp/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='assetsadhp/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsadhp/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsadhp/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='assetsadhp/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename='assetsadhp/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Amoeba - v2.3.1
+  * Template URL: https://bootstrapmade.com/free-one-page-bootstrap-template-amoeba/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="index.html"><span>Admin home</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li><a href="{{url_for('adminparentchildregisterview')}}"> CHILD VIEW REGISTER</a></li>
+          <li><a href="{{url_for('adminparentregisterview')}}">  PARENT VIEW REGISTER</a></li>
+          <li><a href="{{url_for('adminviewdoctor')}}"> VIEW DOCTOR </a></li>
+          <li><a href="{{url_for('viewhospital')}}">VIEW HOSPITAL </a></li>
+          <li><a href="{{url_for('adminviewvaccine')}}">VACCINE </a></li>
+          <li><a href="{{url_for('adminviewpolio')}}">POLIO </a></li>
+          <li><a class="boxed-btr3" href="{{url_for('vaccine')}}"> <strong> LOGOUT</strong></strong></a></li>
+        <ul>
+              
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End #header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section class="inner-page">
+    <div class="container">
+Search  <br/> <br/>   <input type="search" placeholder="Search..." class="form-control search-input" data-table="customers-list"/>
+
+</div>
+</section>
+
+  <center>
+    <table class="table customers-list" style="width: 100px;">
+      <thead>
+        <tr>
+          <th scope="col">CHILDNAME</th>
+        
+          <th scope="col">VACCINE 1</th>
+          <th scope="col">VACCINE 2</th>
+          <th scope="col">VACCINE 3</th>
+          <th scope="col">VACCINE 4</th>
+          <th scope="col">VACCINE 5</th>
+          <th scope="col">VACCINE 6</th>
+          <th scope="col">VACCINE 7</th>
+          <th scope="col">VACCINE 8</th>
+          <th scope="col">VACCINE 9</th>
+          <th scope="col">VACCINE 10</th>
+          <th scope="col">UPDATE</th>
+</tr>
+</thead>
+          <tbody> 
+          <tr>
+          {%for hos in hos%}
+                
+                  <td>{{ hos [2] }}</td>
+                
+                  <td>{{ hos [10] }}</td>
+                  <td>{{ hos [11] }}</td>
+                  <td>{{ hos [12] }}</td>
+                  <td>{{ hos [13] }}</td>
+                  <td>{{ hos [14] }}</td>
+                  <td>{{ hos [15] }}</td>
+                  <td>{{ hos [16] }}</td>
+                  <td>{{ hos [17] }}</td>
+                  <td>{{ hos [18] }}</td>
+                  <td>{{ hos [19] }}</td>
+                  <td><a href="{{url_for('adminemail',id=hos[1])}}">Email</a></td>
+                  
+
+              </tr>
+              {%endfor%}	
+
+
+
+
+
+
+
+
+  </tbody>
+</table>
+
+
+</center>
+
+
+
+  
+<!-- Vendor JS Files -->
+<script src="static/assetsadhp/vendor/jquery/jquery.min.js"></script>
+<script src="static/assetsadhp/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assetsadhp/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="static/assetsadhp/vendor/php-email-form/validate.js"></script>
+<script src="static/assetsadhp/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="static/assetsadhp/vendor/venobox/venobox.min.js"></script>
+<script src="static/assetsadhp/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="static/assetsadhp/js/main.js"></script>
+
+
+  <script>
+    (function(document) {
+        'use strict';
+
+        var TableFilter = (function(myArray) {
+            var search_input;
+
+            function _onInputSearch(e) {
+                search_input = e.target;
+                var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                myArray.forEach.call(tables, function(table) {
+                    myArray.forEach.call(table.tBodies, function(tbody) {
+                        myArray.forEach.call(tbody.rows, function(row) {
+                            var text_content = row.textContent.toLowerCase();
+                            var search_val = search_input.value.toLowerCase();
+                            row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                        });
+                    });
+                });
+            }
+
+            return {
+                init: function() {
+                    var inputs = document.getElementsByClassName('search-input');
+                    myArray.forEach.call(inputs, function(input) {
+                        input.oninput = _onInputSearch;
+                    });
+                }
+            };
+        })(Array.prototype);
+
+        document.addEventListener('readystatechange', function() {
+            if (document.readyState === 'complete') {
+                TableFilter.init();
+            }
+        });
+
+    })(document);
+    
+    function exportTableToExcel(tableID, filename = ''){
+var downloadLink;
+var dataType = 'application/vnd.ms-excel';
+var tableSelect = document.getElementById(tableID);
+var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+// Specify file name
+filename = filename?filename+'.xls':'excel_data.xls';
+
+// Create download link element
+downloadLink = document.createElement("a");
+
+document.body.appendChild(downloadLink);
+
+if(navigator.msSaveOrOpenBlob){
+    var blob = new Blob(['\ufeff', tableHTML], {
+        type: dataType
+    });
+    navigator.msSaveOrOpenBlob( blob, filename);
+}else{
+    // Create a link to the file
+    downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+    // Setting the file name
+    downloadLink.download = filename;
+    
+    //triggering the function
+    downloadLink.click();
+}
+}
+</script>
+</body>
+
+</html>
